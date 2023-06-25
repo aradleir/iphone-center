@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Shop</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>iPhone Center</h1>
+    <div id="cart" onclick="openCart()">
+      Cart (<span id="cartCount">0</span>)
+    </div>
+  </header>
+
+  <div id="productContainer">
+    <div class="product">
+      <img src="images/iphone14promax.jpg" alt="iPhone 14 Pro Max">
+      <h2>iPhone 14 Pro Max</h2>
+      <p>$999</p>
+      <button onclick="addToCart('iPhone 14 Pro Max', 999)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="images/iphone14pro.jpg" alt="iPhone 14 Pro">
+      <h2>iPhone 14 Pro</h2>
+      <p>$899</p>
+      <button onclick="addToCart('iPhone 14 Pro', 899)">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="images/iphone14.jpg" alt="iPhone 14">
+      <h2>iPhone 14</h2>
+      <p>$799</p>
+      <button onclick="addToCart('iPhone 14', 799)">Add to Cart</button>
+    </div>
+  </div>
+
+  <div id="cartOverlay">
+    <div id="cartItems">
+      <h2>Cart</h2>
+      <ul id="cartList"></ul>
+      <p id="totalCost">Total: $0</p>
+      <button onclick="placeOrder()">Place Order</button>
+    </div>
+  </div>
+
+  <script src="shop.js"></script>
+</body>
+</html>
